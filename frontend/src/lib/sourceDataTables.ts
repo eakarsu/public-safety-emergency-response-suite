@@ -13508,5 +13508,2385 @@ export const sourceDataTables: SourceDataTable[] = [
         "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
       }
     ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-community-alerts",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "community_alerts",
+    "displayName": "Community Alerts",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "title",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "title VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "alert_type",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "alert_type VARCHAR(100)"
+      },
+      {
+        "name": "severity",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "severity VARCHAR(50)"
+      },
+      {
+        "name": "affected_area",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "affected_area VARCHAR(255)"
+      },
+      {
+        "name": "population_affected",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "population_affected INTEGER"
+      },
+      {
+        "name": "message",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "message TEXT"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'Draft'",
+        "sourceLine": "status VARCHAR(50) DEFAULT 'Draft'"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-crew-deployments",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "crew_deployments",
+    "displayName": "Crew Deployments",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "crew_name",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "crew_name VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "crew_size",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "crew_size INTEGER"
+      },
+      {
+        "name": "specialization",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "specialization VARCHAR(100)"
+      },
+      {
+        "name": "assigned_incident",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "assigned_incident VARCHAR(255)"
+      },
+      {
+        "name": "deployment_location",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "deployment_location VARCHAR(255)"
+      },
+      {
+        "name": "shift_start",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "shift_start TIMESTAMP"
+      },
+      {
+        "name": "shift_end",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "shift_end TIMESTAMP"
+      },
+      {
+        "name": "fatigue_level",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "fatigue_level VARCHAR(50)"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'Deployed'",
+        "sourceLine": "status VARCHAR(50) DEFAULT 'Deployed'"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-damage-assessments",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "damage_assessments",
+    "displayName": "Damage Assessments",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "incident_name",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "incident_name VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "location",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "location VARCHAR(255)"
+      },
+      {
+        "name": "acres_burned",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "acres_burned DECIMAL(10,1)"
+      },
+      {
+        "name": "structures_damaged",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "0",
+        "sourceLine": "structures_damaged INTEGER DEFAULT 0"
+      },
+      {
+        "name": "structures_destroyed",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "0",
+        "sourceLine": "structures_destroyed INTEGER DEFAULT 0"
+      },
+      {
+        "name": "estimated_cost",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "estimated_cost DECIMAL(14,2)"
+      },
+      {
+        "name": "injuries",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "0",
+        "sourceLine": "injuries INTEGER DEFAULT 0"
+      },
+      {
+        "name": "fatalities",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "0",
+        "sourceLine": "fatalities INTEGER DEFAULT 0"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'In",
+        "sourceLine": "status VARCHAR(50) DEFAULT 'In Progress'"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-routes-extensions-js-damage-severity-predictions",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "damage_severity_predictions",
+    "displayName": "Damage Severity Predictions",
+    "framework": "SQL",
+    "sourceFile": "backend/src/routes/extensions.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "fire_id",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "fire_id INTEGER"
+      },
+      {
+        "name": "observations",
+        "type": "JSONB",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "observations JSONB"
+      },
+      {
+        "name": "prediction",
+        "type": "JSONB",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "prediction JSONB"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-routes-extensions-js-dispatch-orders",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "dispatch_orders",
+    "displayName": "Dispatch Orders",
+    "framework": "SQL",
+    "sourceFile": "backend/src/routes/extensions.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "incident_id",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "incident_id INTEGER"
+      },
+      {
+        "name": "unit_id",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "unit_id VARCHAR(64)"
+      },
+      {
+        "name": "action",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "action VARCHAR(64)"
+      },
+      {
+        "name": "eta_minutes",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "eta_minutes INTEGER"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'queued'",
+        "sourceLine": "status VARCHAR(32) DEFAULT 'queued'"
+      },
+      {
+        "name": "details",
+        "type": "JSONB",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "details JSONB"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-equipment-tracking",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "equipment_tracking",
+    "displayName": "Equipment Tracking",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "equipment_name",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "equipment_name VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "equipment_type",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "equipment_type VARCHAR(100)"
+      },
+      {
+        "name": "serial_number",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "serial_number VARCHAR(100)"
+      },
+      {
+        "name": "current_location",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "current_location VARCHAR(255)"
+      },
+      {
+        "name": "condition",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "condition VARCHAR(50)"
+      },
+      {
+        "name": "last_maintenance",
+        "type": "DATE",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "last_maintenance DATE"
+      },
+      {
+        "name": "hours_used",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "0",
+        "sourceLine": "hours_used INTEGER DEFAULT 0"
+      },
+      {
+        "name": "assigned_to",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "assigned_to VARCHAR(255)"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'Operational'",
+        "sourceLine": "status VARCHAR(50) DEFAULT 'Operational'"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-routes-custom-views-js-evacuation-orders",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "evacuation_orders",
+    "displayName": "Evacuation Orders",
+    "framework": "SQL",
+    "sourceFile": "backend/src/routes/customViews.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "zones",
+        "type": "TEXT[]",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "zones TEXT[] NOT NULL"
+      },
+      {
+        "name": "message",
+        "type": "TEXT",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "message TEXT NOT NULL"
+      },
+      {
+        "name": "channels",
+        "type": "TEXT[]",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "channels TEXT[] NOT NULL"
+      },
+      {
+        "name": "est_recipients",
+        "type": "INTEGER",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "est_recipients INTEGER NOT NULL"
+      },
+      {
+        "name": "issued_by",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "issued_by VARCHAR(255)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-evacuation-plans",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "evacuation_plans",
+    "displayName": "Evacuation Plans",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "zone_name",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "zone_name VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "population",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "population INTEGER"
+      },
+      {
+        "name": "primary_route",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "primary_route TEXT"
+      },
+      {
+        "name": "secondary_route",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "secondary_route TEXT"
+      },
+      {
+        "name": "assembly_point",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "assembly_point VARCHAR(255)"
+      },
+      {
+        "name": "special_needs_count",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "0",
+        "sourceLine": "special_needs_count INTEGER DEFAULT 0"
+      },
+      {
+        "name": "vehicles_estimated",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "0",
+        "sourceLine": "vehicles_estimated INTEGER DEFAULT 0"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'Draft'",
+        "sourceLine": "status VARCHAR(50) DEFAULT 'Draft'"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-fire-detections",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "fire_detections",
+    "displayName": "Fire Detections",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "location",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "location VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "latitude",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "latitude DECIMAL(10,6)"
+      },
+      {
+        "name": "longitude",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "longitude DECIMAL(10,6)"
+      },
+      {
+        "name": "sensor_type",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "sensor_type VARCHAR(100)"
+      },
+      {
+        "name": "confidence_level",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "confidence_level INTEGER"
+      },
+      {
+        "name": "temperature",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "temperature DECIMAL(6,1)"
+      },
+      {
+        "name": "satellite_source",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "satellite_source VARCHAR(100)"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'Active'",
+        "sourceLine": "status VARCHAR(50) DEFAULT 'Active'"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "detected_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "detected_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-routes-batch09-gap-ai-js-gap-features",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "gap_features",
+    "displayName": "Gap Features",
+    "framework": "SQL",
+    "sourceFile": "backend/src/routes/batch09GapAi.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "feature",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "feature TEXT"
+      },
+      {
+        "name": "input",
+        "type": "JSONB",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "input JSONB"
+      },
+      {
+        "name": "output",
+        "type": "JSONB",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "output JSONB"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMPTZ DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-routes-batch09-gap-nonai-js-gap-features",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "gap_features",
+    "displayName": "Gap Features",
+    "framework": "SQL",
+    "sourceFile": "backend/src/routes/batch09GapNonai.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "feature",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "feature TEXT"
+      },
+      {
+        "name": "input",
+        "type": "JSONB",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "input JSONB"
+      },
+      {
+        "name": "output",
+        "type": "JSONB",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "output JSONB"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMPTZ DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-routes-custom-views-js-incident-command",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "incident_command",
+    "displayName": "Incident Command",
+    "framework": "SQL",
+    "sourceFile": "backend/src/routes/customViews.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "incident_name",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "incident_name VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "incident_type",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "incident_type VARCHAR(100) NOT NULL"
+      },
+      {
+        "name": "location",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "location VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "severity",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "severity VARCHAR(50) NOT NULL"
+      },
+      {
+        "name": "commander",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "commander VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "resources",
+        "type": "JSONB",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "resources JSONB NOT NULL"
+      },
+      {
+        "name": "notes",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "notes TEXT"
+      },
+      {
+        "name": "submitted_by",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "submitted_by VARCHAR(255)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-routes-extensions-js-insurance-claims",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "insurance_claims",
+    "displayName": "Insurance Claims",
+    "framework": "SQL",
+    "sourceFile": "backend/src/routes/extensions.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "fire_id",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "fire_id INTEGER"
+      },
+      {
+        "name": "property_address",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "property_address TEXT"
+      },
+      {
+        "name": "policy_number",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "policy_number VARCHAR(128)"
+      },
+      {
+        "name": "carrier",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "carrier VARCHAR(128)"
+      },
+      {
+        "name": "damage_estimate",
+        "type": "NUMERIC",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "damage_estimate NUMERIC(14,2)"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'submitted'",
+        "sourceLine": "status VARCHAR(32) DEFAULT 'submitted'"
+      },
+      {
+        "name": "external_ref",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "external_ref VARCHAR(255)"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-routes-extensions-js-mutual-aid-requests",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "mutual_aid_requests",
+    "displayName": "Mutual Aid Requests",
+    "framework": "SQL",
+    "sourceFile": "backend/src/routes/extensions.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "requesting_agency",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "requesting_agency VARCHAR(255)"
+      },
+      {
+        "name": "target_agency",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "target_agency VARCHAR(255)"
+      },
+      {
+        "name": "resource_type",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "resource_type VARCHAR(64)"
+      },
+      {
+        "name": "quantity",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "quantity INTEGER"
+      },
+      {
+        "name": "priority",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "priority VARCHAR(32)"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'drafted'",
+        "sourceLine": "status VARCHAR(32) DEFAULT 'drafted'"
+      },
+      {
+        "name": "notes",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "notes TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-routes-extensions-js-radio-messages",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "radio_messages",
+    "displayName": "Radio Messages",
+    "framework": "SQL",
+    "sourceFile": "backend/src/routes/extensions.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "channel",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "channel VARCHAR(64)"
+      },
+      {
+        "name": "from_unit",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "from_unit VARCHAR(64)"
+      },
+      {
+        "name": "to_unit",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "to_unit VARCHAR(64)"
+      },
+      {
+        "name": "body",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "body TEXT"
+      },
+      {
+        "name": "priority",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'normal'",
+        "sourceLine": "priority VARCHAR(16) DEFAULT 'normal'"
+      },
+      {
+        "name": "delivered",
+        "type": "BOOLEAN",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "FALSE",
+        "sourceLine": "delivered BOOLEAN DEFAULT FALSE"
+      },
+      {
+        "name": "external_ref",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "external_ref VARCHAR(255)"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-resource-allocations",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "resource_allocations",
+    "displayName": "Resource Allocations",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "incident_name",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "incident_name VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "resource_type",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "resource_type VARCHAR(100)"
+      },
+      {
+        "name": "quantity",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "quantity INTEGER"
+      },
+      {
+        "name": "location",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "location VARCHAR(255)"
+      },
+      {
+        "name": "priority",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "priority VARCHAR(50)"
+      },
+      {
+        "name": "estimated_cost",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "estimated_cost DECIMAL(12,2)"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'Pending'",
+        "sourceLine": "status VARCHAR(50) DEFAULT 'Pending'"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-risk-assessments",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "risk_assessments",
+    "displayName": "Risk Assessments",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "location",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "location VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "latitude",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "latitude DECIMAL(10,6)"
+      },
+      {
+        "name": "longitude",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "longitude DECIMAL(10,6)"
+      },
+      {
+        "name": "vegetation_type",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "vegetation_type VARCHAR(100)"
+      },
+      {
+        "name": "terrain",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "terrain VARCHAR(100)"
+      },
+      {
+        "name": "weather_conditions",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "weather_conditions TEXT"
+      },
+      {
+        "name": "risk_level",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'Pending'",
+        "sourceLine": "risk_level VARCHAR(50) DEFAULT 'Pending'"
+      },
+      {
+        "name": "risk_score",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "0",
+        "sourceLine": "risk_score INTEGER DEFAULT 0"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-smoke-reports",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "smoke_reports",
+    "displayName": "Smoke Reports",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "location",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "location VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "latitude",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "latitude DECIMAL(10,6)"
+      },
+      {
+        "name": "longitude",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "longitude DECIMAL(10,6)"
+      },
+      {
+        "name": "smoke_color",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "smoke_color VARCHAR(50)"
+      },
+      {
+        "name": "smoke_density",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "smoke_density VARCHAR(50)"
+      },
+      {
+        "name": "wind_direction",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "wind_direction VARCHAR(50)"
+      },
+      {
+        "name": "reporter_name",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "reporter_name VARCHAR(255)"
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "description TEXT"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'Reported'",
+        "sourceLine": "status VARCHAR(50) DEFAULT 'Reported'"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-spread-predictions",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "spread_predictions",
+    "displayName": "Spread Predictions",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "fire_name",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "fire_name VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "current_acres",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "current_acres DECIMAL(10,1)"
+      },
+      {
+        "name": "wind_speed",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "wind_speed DECIMAL(5,1)"
+      },
+      {
+        "name": "wind_direction",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "wind_direction VARCHAR(20)"
+      },
+      {
+        "name": "terrain_type",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "terrain_type VARCHAR(100)"
+      },
+      {
+        "name": "vegetation_density",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "vegetation_density VARCHAR(50)"
+      },
+      {
+        "name": "humidity",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "humidity DECIMAL(5,1)"
+      },
+      {
+        "name": "temperature",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "temperature DECIMAL(5,1)"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'Active'",
+        "sourceLine": "status VARCHAR(50) DEFAULT 'Active'"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-users",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "users",
+    "displayName": "Users",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "name VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": true,
+        "defaultValue": "",
+        "sourceLine": "email VARCHAR(255) UNIQUE NOT NULL"
+      },
+      {
+        "name": "password_hash",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "password_hash VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "role",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'analyst'",
+        "sourceLine": "role VARCHAR(50) DEFAULT 'analyst'"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-water-sources",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "water_sources",
+    "displayName": "Water Sources",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "name VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "source_type",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "source_type VARCHAR(100)"
+      },
+      {
+        "name": "latitude",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "latitude DECIMAL(10,6)"
+      },
+      {
+        "name": "longitude",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "longitude DECIMAL(10,6)"
+      },
+      {
+        "name": "capacity_gallons",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "capacity_gallons INTEGER"
+      },
+      {
+        "name": "accessibility",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "accessibility VARCHAR(100)"
+      },
+      {
+        "name": "road_access",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "road_access VARCHAR(100)"
+      },
+      {
+        "name": "helicopter_accessible",
+        "type": "BOOLEAN",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "false",
+        "sourceLine": "helicopter_accessible BOOLEAN DEFAULT false"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "'Available'",
+        "sourceLine": "status VARCHAR(50) DEFAULT 'Available'"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
+  },
+  {
+    "id": "ai-wildfire-prediction-response-backend-src-seeds-seed-js-weather-analyses",
+    "sourceProject": "AIWildfirePredictionResponse",
+    "name": "weather_analyses",
+    "displayName": "Weather Analyses",
+    "framework": "SQL",
+    "sourceFile": "backend/src/seeds/seed.js",
+    "columns": [
+      {
+        "name": "id",
+        "type": "SERIAL",
+        "nullable": true,
+        "primaryKey": true,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "id SERIAL PRIMARY KEY"
+      },
+      {
+        "name": "location",
+        "type": "VARCHAR",
+        "nullable": false,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "location VARCHAR(255) NOT NULL"
+      },
+      {
+        "name": "temperature",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "temperature DECIMAL(5,1)"
+      },
+      {
+        "name": "humidity",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "humidity DECIMAL(5,1)"
+      },
+      {
+        "name": "wind_speed",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "wind_speed DECIMAL(5,1)"
+      },
+      {
+        "name": "wind_direction",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "wind_direction VARCHAR(20)"
+      },
+      {
+        "name": "precipitation",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "precipitation DECIMAL(5,2)"
+      },
+      {
+        "name": "forecast_period",
+        "type": "VARCHAR",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "forecast_period VARCHAR(50)"
+      },
+      {
+        "name": "fire_weather_index",
+        "type": "DECIMAL",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "0",
+        "sourceLine": "fire_weather_index DECIMAL(5,1) DEFAULT 0"
+      },
+      {
+        "name": "ai_analysis",
+        "type": "TEXT",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "ai_analysis TEXT"
+      },
+      {
+        "name": "created_by",
+        "type": "INTEGER",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "",
+        "sourceLine": "created_by INTEGER REFERENCES users(id)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "created_at TIMESTAMP DEFAULT NOW()"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "nullable": true,
+        "primaryKey": false,
+        "unique": false,
+        "defaultValue": "NOW()",
+        "sourceLine": "updated_at TIMESTAMP DEFAULT NOW()"
+      }
+    ]
   }
 ];

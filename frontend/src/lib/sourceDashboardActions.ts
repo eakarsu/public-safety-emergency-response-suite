@@ -8,4 +8,20 @@ export type SourceDashboardAction = {
   count: number;
 };
 
-export const sourceDashboardActions: SourceDashboardAction[] = [];
+export const sourceDashboardActions: SourceDashboardAction[] = [
+  {
+    "id": "wildfire-prediction-response",
+    "label": "Wildfire Prediction Response",
+    "description": "Open Wildfire Prediction Response workflows elevated from AIWildfirePredictionResponse.",
+    "href": "/wildfire-risk-forecast",
+    "sourceProjects": [
+      "AIWildfirePredictionResponse"
+    ],
+    "examples": [
+      "Wildfire Risk Forecast",
+      "Response Resource Plan",
+      "Evacuation Zone Review"
+    ],
+    "count": 1
+  }
+];

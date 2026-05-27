@@ -1,8 +1,8 @@
 # Public Safety Emergency Response Suite Source Data Tables
 
-Mapped source projects: 5
+Mapped source projects: 6
 
-Detected source tables: 143
+Detected source tables: 165
 
 | Source Project | Table | Framework | Columns | Source File |
 | --- | --- | --- | ---: | --- |
@@ -149,3 +149,25 @@ Detected source tables: 143
 | AISchoolSafetyThreatAssessment | users | SQL | 6 | server/seed.js |
 | AISchoolSafetyThreatAssessment | visitor_logs | SQL | 10 | server/seed.js |
 | AISchoolSafetyThreatAssessment | weapon_detections | SQL | 10 | server/seed.js |
+| AIWildfirePredictionResponse | community_alerts | SQL | 12 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | crew_deployments | SQL | 14 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | damage_assessments | SQL | 14 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | damage_severity_predictions | SQL | 6 | backend/src/routes/extensions.js |
+| AIWildfirePredictionResponse | dispatch_orders | SQL | 9 | backend/src/routes/extensions.js |
+| AIWildfirePredictionResponse | equipment_tracking | SQL | 14 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | evacuation_orders | SQL | 7 | backend/src/routes/customViews.js |
+| AIWildfirePredictionResponse | evacuation_plans | SQL | 13 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | fire_detections | SQL | 14 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | gap_features | SQL | 5 | backend/src/routes/batch09GapAi.js |
+| AIWildfirePredictionResponse | gap_features | SQL | 5 | backend/src/routes/batch09GapNonai.js |
+| AIWildfirePredictionResponse | incident_command | SQL | 10 | backend/src/routes/customViews.js |
+| AIWildfirePredictionResponse | insurance_claims | SQL | 10 | backend/src/routes/extensions.js |
+| AIWildfirePredictionResponse | mutual_aid_requests | SQL | 11 | backend/src/routes/extensions.js |
+| AIWildfirePredictionResponse | radio_messages | SQL | 10 | backend/src/routes/extensions.js |
+| AIWildfirePredictionResponse | resource_allocations | SQL | 12 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | risk_assessments | SQL | 13 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | smoke_reports | SQL | 14 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | spread_predictions | SQL | 14 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | users | SQL | 6 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | water_sources | SQL | 14 | backend/src/seeds/seed.js |
+| AIWildfirePredictionResponse | weather_analyses | SQL | 13 | backend/src/seeds/seed.js |

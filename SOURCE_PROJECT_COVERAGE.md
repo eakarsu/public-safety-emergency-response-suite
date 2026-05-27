@@ -7,3 +7,4 @@
 | AIConstructionWearableSafetyMonitor | 20 | 11 | 1 | 8 | ai.js<br>aiNew.js<br>airquality.js<br>auth.js<br>emergency.js |
 | AIDisasterResponseCoordinator | 22 | 8 | 1 | 2 | aarRoutes.js<br>aiNew.js<br>aiRoutes.js<br>authRoutes.js<br>briefingRoutes.js |
 | AISchoolSafetyThreatAssessment | 18 | 3 | 1 | 5 | accessControl.js<br>aiCenter.js<br>alerts.js<br>auditLog.js<br>audits.js |
+| AIWildfirePredictionResponse | 0 | 0 | 0 | 1 | Wildfire Risk Forecast<br>Response Resource Plan<br>Evacuation Zone Review |

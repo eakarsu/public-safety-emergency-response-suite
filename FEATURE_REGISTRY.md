@@ -18,3 +18,13 @@
 - Profiles
 - AI Assistant
 - AI Tools
+
+## Wildfire Prediction Response
+
+- Wildfire Risk Forecast
+- Response Resource Plan
+- Evacuation Zone Review
+
+## Focused enhancement: Wildfire Prediction Response
+
+Source evidence: AIWildfirePredictionResponse.

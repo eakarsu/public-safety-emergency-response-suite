@@ -7,6 +7,9 @@ Primary routes:
 - `/profiles`
 
 Feature routes:
+- `/evacuation-zone-review`
+- `/response-resource-plan`
+- `/wildfire-risk-forecast`
 - `/records`
 - `/incidents`
 - `/units`
